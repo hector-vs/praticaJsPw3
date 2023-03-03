@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
+    <title>Ex010</title>
     <link rel="stylesheet" href="../style.css">
     <style>
         div#fundo {
-            background-color: rgb(116, 189, 189);
+            background-color: rgb(176, 189, 116);
         }
     </style>
 </head>
@@ -17,8 +17,31 @@
         <main>
             <article>
                 <p id="back"><a href="../index.html">Voltar</a></p>
-                <p class="desc"></p>
-                
+                <p class="desc">Faça um programa que leia 5 valores reais e imprima o quadrado de cada um deles. Ao fim, imprima também o somatório dos cinco.</p>
+                <input type="number" name="txtn1" id="txtn1" style="width: 70px;">
+                <input type="number" name="txtn2" id="txtn2" style="width: 70px;">
+                <input type="number" name="txtn2" id="txtn3" style="width: 70px;">
+                <input type="number" name="txtn3" id="txtn4" style="width: 70px;">
+                <input type="number" name="txtn4" id="txtn5" style="width: 70px;">
+                <input type="submit" value="calcular" onclick="quadrado()">
+                <p id="quadrados"></p>
+                <p id="soma"></p>
+                <script>
+                    function quadrado(){
+                        var tn1 = document.getElementById('txtn1');
+                        var n1 = parseInt(tn1.value);
+                        var tn2 = document.getElementById('txtn2');
+                        var n2 = parseInt(tn2.value);
+                        var tn3 = document.getElementById('txtn3');
+                        var n3 = parseInt(tn3.value);
+                        var tn4 = document.getElementById('txtn4');
+                        var n4 = parseInt(tn4.value);
+                        var tn5 = document.getElementById('txtn5');
+                        var n5 = parseInt(tn5.value);
+                        document.getElementById('quadrados').innerText = `Quadrados: ${n1*n1}, ${n2*n2}, ${n3*n3}, ${n4*n4}, ${n5*n5}.`;
+                        document.getElementById('soma').innerText = `Soma: ${n1+n2+n3+n4+n5}.`;
+                    }
+                </script>
             </article>
         </main>
     </div>

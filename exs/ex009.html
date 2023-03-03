@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
+    <title>Ex009</title>
     <link rel="stylesheet" href="../style.css">
     <style>
         div#fundo {
-            background-color: rgb(116, 189, 189);
+            background-color: rgb(189, 116, 152);
         }
     </style>
 </head>
@@ -18,7 +18,23 @@
             <article>
                 <p id="back"><a href="../index.html">Voltar</a></p>
                 <p class="desc">Faça um programa que leia o salário bruto e calcule o salário líquido. </p>
-                
+                <input type="number" name="salario" id="sal" style="width: 250px;" placeholder="Seu salário">
+                <input type="submit" value="Calcular" onclick="calcular()">
+                <p id="msg"></p>
+                <script>
+                    function calcular(){
+                        var sal = document.getElementById('sal').value;
+                        sal = Number(sal);
+                        if(sal<1500){
+                            var res = sal - (sal*0.08);
+                            document.getElementById('msg').innerText = `Desconto do IR: 0%. Desconto do INSS: 8%. Salário final: ${res}`;
+                        }else{
+                            var res = sal - (sal*0.05);
+                            res = res - (res*0.11);
+                            document.getElementById('msg').innerText = `Desconto do IR: 5%. Desconto do INSS: 11%. Salário final: ${res}`;
+                        }
+                    }
+                </script>
             </article>
         </main>
     </div>
