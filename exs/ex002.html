@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        div#fundo {
+            background-color: rgb(116, 189, 189);
+        }
+    </style>
+</head>
+<body>
+    <div id="fundo">
+        <main>
+            <article>
+                <p id="back"><a href="../index.html">Voltar</a></p>
+                <p class="desc">Desenvolva umprograma que calcule o fatorial de um número dado como entrada.</p>
+                <input type="number" name="txtn1" id="txtn1" style="width: 300px;">
+                <input type="submit" value="Fatorial" onclick="fatorial()">
+                <script>
+                    function fatorial(){
+                        var tn1 = document.getElementById('txtn1');
+                        var n1 = parseInt(tn1.value);
+                        var resp = n1;
+                        for(var i = (n1 - 1); i>0; i--){
+                            resp *= i;
+                        }
+                        alert(resp);
+                    }
+                </script>
+            </article>
+        </main>
+    </div>
+</body>
+</html>
