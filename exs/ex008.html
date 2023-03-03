@@ -17,8 +17,22 @@
         <main>
             <article>
                 <p id="back"><a href="../index.html">Voltar</a></p>
-                <p class="desc"></p>
-                
+                <p class="desc">Construa um programa que leia um número inteiro e imprima a informação se este número
+                    é ou não divisível por 5. Dica: Utilize o operador %.</p>
+                <input type="number" name="valor" id="valor">
+                <input type="submit" value="checar" onclick="checar()">
+                <p id="msg"></p>
+                <script>
+                    function checar(){
+                        var vall = document.getElementById('valor');
+                        var val = Number(vall.value);
+                        if(val%5==0){
+                            document.getElementById('msg').innerText = "O valor é divisível por 5.";
+                        }else{
+                            document.getElementById('msg').innerText = "O valor não é divisível por 5.";
+                        }
+                    }   
+                </script>
             </article>
         </main>
     </div>

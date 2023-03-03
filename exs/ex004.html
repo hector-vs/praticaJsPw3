@@ -17,8 +17,19 @@
         <main>
             <article>
                 <p id="back"><a href="../index.html">Voltar</a></p>
-                <p class="desc"></p>
-                
+                <p class="desc">Desenvolva umprograma que receba 2 valores e informe-os.</p>
+                <input type="number" name="txtn1" id="txtn1" style="width: 150px;">
+                <input type="number" name="txtn2" id="txtn2" style="width: 150px;">
+                <input type="submit" value="Ver" onclick="ver()">
+                <script>
+                    function ver(){
+                        var tn1 = document.getElementById('txtn1');
+                        var a = parseInt(tn1.value);
+                        var tn2 = document.getElementById('txtn2');
+                        var c = parseInt(tn2.value);
+                        alert(`O primeiro valor informado foi ${a}. O segundo foi ${c}`);
+                    }
+                </script>
             </article>
         </main>
     </div>

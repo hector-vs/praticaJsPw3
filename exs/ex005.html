@@ -17,8 +17,21 @@
         <main>
             <article>
                 <p id="back"><a href="../index.html">Voltar</a></p>
-                <p class="desc"></p>
-                
+                <p class="desc">Faça um programa que leia o sexo do usuário e apresente a mensagem “O sexo é válido”, se o caractere digitado for M ou F.</p>
+                <label for="sexo">Informe seu sexo [M/F]</label>
+                <input type="text" name="sexo" id="txt1" style="width: 150px; outline: none;">
+                <input type="submit" value="Verificar" onclick="verificar()">
+                <p id="texto"></p>
+                <script>
+                    function verificar(){
+                        var sexo = document.getElementById('txt1').value;
+                        if((sexo == "M") | (sexo == "m") | (sexo == "f") | (sexo=="F")){
+                            document.getElementById('texto').innerText = "Seu sexo é válido!";
+                        }else{
+                            document.getElementById('texto').innerText = "Seu sexo é inválido!";
+                        }
+                    }
+                </script>
             </article>
         </main>
     </div>

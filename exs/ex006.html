@@ -17,8 +17,22 @@
         <main>
             <article>
                 <p id="back"><a href="../index.html">Voltar</a></p>
-                <p class="desc"></p>
-                
+                <p class="desc">Faça um programa que leia o valor do salário bruto de um funcionário. Se o salário for menor
+                    ou igual a R$ 500,00, o programa deve aplicar um aumento de 0.10 (10%)</p>
+                <input type="number" name="valor" id="valor">
+                <input type="submit" value="checar" onclick="checar()">
+                <p id="msg"></p>
+                <script>
+                    function checar(){
+                        var vall = document.getElementById('valor');
+                        var val = Number(vall.value);
+                        if(val>=20 && val<=90){
+                            document.getElementById('msg').innerText = "O valor está entre 20 e 90.";
+                        }else{
+                            document.getElementById('msg').innerText = "O valor não está entre 20 e 90.";
+                        }
+                }   
+                </script>
             </article>
         </main>
     </div>

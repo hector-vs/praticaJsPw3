@@ -17,8 +17,19 @@
         <main>
             <article>
                 <p id="back"><a href="../index.html">Voltar</a></p>
-                <p class="desc"></p>
-                
+                <p class="desc">Construa um programa que leia um número inteiro e imprima a informação se este número
+                    é ou não divisível por 5. Dica: Utilize o operador %.</p>
+                    <script>
+                        var sair = false;
+                        var sal = window.prompt("Informe o seu salário:");
+                        var sal = parseFloat(sal);
+                        if(sal<=500){
+                            sal *= 1.10;
+                            var res = window.prompt(`O aumento é de 10%, o salário fica = ${sal}.`);
+                        }else{
+                            var res = window.prompt(`Sem aumento. (${sal})`);
+                        }
+                    </script>
             </article>
         </main>
     </div>

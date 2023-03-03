@@ -17,8 +17,30 @@
         <main>
             <article>
                 <p id="back"><a href="../index.html">Voltar</a></p>
-                <p class="desc">Faça  um  programa  que  leia  os  valores  dos  salários  atuais  dos  funcionários  de  uma empresa e imprima os valores com aumento.</p>
-                
+                <p class="desc"> Faça um programa que leia os valores dos salários atuais dos funcionários de uma
+                    empresa e imprima os valores com aumento.</p>
+                <script>
+                    var sair = false;
+                    do{
+                        var sal = window.prompt("Informe o seu salário:");
+                        var sal = parseFloat(sal);
+                        if(sal<=500){
+                            sal *= 1.10;
+                            var res = window.prompt(`O aumento é de 10%, o salário fica = ${sal}. Quer continuar? [S/N]`);
+                            res = res.toUpperCase();
+                            if(res != "S"){
+                                sair = true;
+                            }
+                        }else{
+                            sal *= 1.08;
+                            var res = window.prompt(`O aumento é de 8%, o salário fica = ${sal}. Quer continuar? [S/N]`);
+                            res = res.toUpperCase();
+                            if(res != "S"){
+                                sair = true;
+                            }
+                        }
+                    }while(sair != true);
+                </script>
             </article>
         </main>
     </div>
